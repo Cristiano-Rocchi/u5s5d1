@@ -49,16 +49,17 @@ public class Menu {
     public void stampaMenu() {
         System.out.println("Pizzas");
         for (Pizza pizza : Pizze) {
-            System.out.println(pizza + "\t" + pizza.getCalorie() + "\t" + pizza.getPrezzo());
+            System.out.println(pizza + " " + pizza.getCalorie() + " " + pizza.getPrezzo());
         }
         System.out.println("\nToppings");
         for (Topping topping : Toppings) {
-            System.out.println(topping + "\t" + topping.getCalorie() + "\t" + topping.getPrezzo());
+            System.out.println(topping + " " + topping.getCalorie() + " " + topping.getPrezzo());
         }
         System.out.println("\nDrinks");
         for (Bevanda bevanda : Bevande) {
-            System.out.println(bevanda + "\t" + bevanda.getCalorie() + "\t" + bevanda.getPrezzo());
+            System.out.println(bevanda + " " + bevanda.getCalorie() + " " + bevanda.getPrezzo());
         }
     }
-}
+    }
+
 

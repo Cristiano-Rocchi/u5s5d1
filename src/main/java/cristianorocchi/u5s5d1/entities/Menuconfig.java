@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import java.util.Arrays;
 
 @Configuration
-public class MenuConfig {
+public class Menuconfig {
 
     @Bean
     public Topping cheese(){
