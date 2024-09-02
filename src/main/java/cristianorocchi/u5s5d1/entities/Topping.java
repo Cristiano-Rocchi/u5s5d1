@@ -11,11 +11,6 @@ public class Topping {
         this.prezzo = prezzo;
     }
 
-    @Override
-    public String toString() {
-        return nome;
-    }
-
 
     public String getNome() {
         return nome;
@@ -27,6 +22,15 @@ public class Topping {
 
     public double getPrezzo() {
         return prezzo;
+    }
+
+    @Override
+    public String toString() {
+        return "Topping{" +
+                "nome='" + nome + '\'' +
+                ", calorie=" + calorie +
+                ", prezzo=" + prezzo +
+                '}';
     }
 }
 
