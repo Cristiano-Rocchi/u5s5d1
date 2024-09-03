@@ -33,14 +33,14 @@ public class Ordine {
     }
 
     private double calcolaImportoTotale(double costoCoperto) {
-        // Usa la funzione getPrezzo su ogni ElementoMenu
+
         double totaleElementi = elementiMenu.stream()
                 .mapToDouble(ElementoMenu::getPrezzo)
                 .sum();
         return totaleElementi + (numeroCoperti * costoCoperto);
     }
 
-    // Getter e Setter
+
     public int getNumeroOrdine() { return numeroOrdine; }
     public Tavolo getTavolo() { return tavolo; }
     public List<ElementoMenu> getElementiMenu() { return elementiMenu; }
