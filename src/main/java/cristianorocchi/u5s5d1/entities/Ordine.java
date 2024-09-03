@@ -1,5 +1,8 @@
 package cristianorocchi.u5s5d1.entities;
 
+import cristianorocchi.u5s5d1.entities.ElementoMenu;
+import cristianorocchi.u5s5d1.entities.Tavolo;
+
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -13,13 +16,13 @@ public class Ordine {
 
     private int numeroOrdine;
     private Tavolo tavolo;
-    private List<String> elementiMenu;
-    private StatoOrdine stato; 
+    private List<ElementoMenu> elementiMenu; // Cambiato da List<String> a List<ElementoMenu>
+    private StatoOrdine stato;
     private int numeroCoperti;
     private LocalDateTime oraAcquisizione;
     private double importoTotale;
 
-    public Ordine(int numeroOrdine, Tavolo tavolo, List<String> elementiMenu, StatoOrdine stato, int numeroCoperti, double costoCoperto) {
+    public Ordine(int numeroOrdine, Tavolo tavolo, List<ElementoMenu> elementiMenu, StatoOrdine stato, int numeroCoperti, double costoCoperto) {
         this.numeroOrdine = numeroOrdine;
         this.tavolo = tavolo;
         this.elementiMenu = elementiMenu;
@@ -30,15 +33,17 @@ public class Ordine {
     }
 
     private double calcolaImportoTotale(double costoCoperto) {
+        // Usa la funzione getPrezzo su ogni ElementoMenu
         double totaleElementi = elementiMenu.stream()
-
-        return 2;
+                .mapToDouble(ElementoMenu::getPrezzo)
+                .sum();
+        return totaleElementi + (numeroCoperti * costoCoperto);
     }
 
     // Getter e Setter
     public int getNumeroOrdine() { return numeroOrdine; }
     public Tavolo getTavolo() { return tavolo; }
-    public List<String> getElementiMenu() { return elementiMenu; }
+    public List<ElementoMenu> getElementiMenu() { return elementiMenu; }
     public StatoOrdine getStato() { return stato; }
     public void setStato(StatoOrdine stato) { this.stato = stato; }
     public int getNumeroCoperti() { return numeroCoperti; }
