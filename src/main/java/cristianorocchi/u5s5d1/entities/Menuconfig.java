@@ -67,7 +67,7 @@ public class Menuconfig {
     public Menu menu(){
         return new Menu(
                 Arrays.asList(salamiPizza(),margherita(),hawaiian()),
-                Arrays.asList(cheese(),Ham(),Pineapple(),Onions()),
+                Arrays.asList(cheese(),Ham(),Pineapple(),Onions(),Salami()),
                 Arrays.asList(lemonade(),water(),wine())
         );
     }
