@@ -16,7 +16,7 @@ public class Ordine {
 
     private int numeroOrdine;
     private Tavolo tavolo;
-    private List<ElementoMenu> elementiMenu; // Cambiato da List<String> a List<ElementoMenu>
+    private List<ElementoMenu> elementiMenu;
     private StatoOrdine stato;
     private int numeroCoperti;
     private LocalDateTime oraAcquisizione;

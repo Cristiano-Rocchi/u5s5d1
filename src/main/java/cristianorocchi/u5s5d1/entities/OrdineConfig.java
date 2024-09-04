@@ -30,7 +30,7 @@ public class OrdineConfig {
     }
 
     @Bean
-    public ElementoMenu lemonadeOrdine() { 
+    public ElementoMenu lemonadeOrdine() {
         return new ElementoMenu("Lemonade", 1.29);
     }
 
