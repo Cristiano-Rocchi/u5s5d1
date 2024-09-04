@@ -30,7 +30,7 @@ class U5s5d1ApplicationTests {
 	public void testBevandaPresenteNelMenu() {
 		List<Bevanda> bevande = menu.getBevande();
 		boolean lemonadePresente = bevande.stream().anyMatch(bevanda -> bevanda.getNome().equals("Lemonade"));
-		Assertions.assertTrue(lemonadePresente, "La Lemonade dovrebbe essere presente nel menu.");
+		Assertions.assertTrue(lemonadePresente, "La limonata dovrebbe essere presente nel menu.");
 	}
 
 	@Test
@@ -39,7 +39,7 @@ class U5s5d1ApplicationTests {
 				.filter(pizza -> pizza.getNome().equals("MargheritaPizza"))
 				.findFirst()
 				.orElse(null);
-		Assertions.assertNotNull(margherita, "La pizza Margherita dovrebbe essere presente nel menu.");
+		Assertions.assertNotNull(margherita, "La pizza margherita dovrebbe essere presente nel menu.");
 		Assertions.assertEquals(4.99, margherita.getPrezzo(), 0.01, "Il prezzo della pizza Margherita dovrebbe essere 4.99.");
 	}
 
